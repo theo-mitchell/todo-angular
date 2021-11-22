@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { TodoItem } from 'src/app/interfaces/todo-item';
+// import {IAngularMyDpOptions, IMyDateModel} from 'angular-mydatepicker';
 
 @Component({
   selector: 'app-add-todo-item',
@@ -6,10 +8,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-todo-item.component.css']
 })
 export class AddTodoItemComponent implements OnInit {
+  @Output() onAddTodoItem: EventEmitter<TodoItem> = new EventEmitter;
+  
+  // myDpOptions: IAngularMyDpOptions = {
+  //   dateRange: false,
+  //   dateFormat: 'dd.mm.yyyy'
+  // };
+
+  name!:string;
+  description!:string
+  dueDate!:string;
+  priority!:'High'|'Medium'|'Low';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    if(!this.name){
+      alert("Please enter a project name")
+      return
+    }
+
+    const newItem =  {
+      name: this.name,
+      description: this.description,
+      dueDate: this.dueDate,
+      priority: this.priority
+    }
+
+    console.log(newItem);
+    // this.onAddTodoItem.emit(newItem);
+    
+    this.name = '';
+    this.description = '';
+    this.dueDate = '';
+    // this.priority = '';
   }
 
 }

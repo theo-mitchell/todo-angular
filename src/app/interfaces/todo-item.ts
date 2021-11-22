@@ -1,6 +1,7 @@
 export interface TodoItem {
-    title: string 
+    name: string 
     description: string
-    dueDate: Date
-    priority: 'High'|'Medium'|'Low'
+    dueDate: string
+    priority?: 'High'|'Medium'|'Low'
+    id?: number;
 }

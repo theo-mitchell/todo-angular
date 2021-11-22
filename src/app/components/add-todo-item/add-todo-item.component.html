@@ -1,11 +1,26 @@
-<!-- <form 
+<form 
     (ngSubmit)="onSubmit()"
 >
     <div>
         <label for="name">Name</label>
         <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add Name" /> 
     </div>
+    <div>
+        <label for="description">Description</label>
+        <textarea name="description" [(ngModel)]="description" id="description" placeholder="Add Description"> </textarea> 
+    </div>
+    <div>
+        <label for="dueDate">Due Date</label>
+        <textarea name="dueDate" [(ngModel)]="dueDate" id="dueDate" placeholder="Add Due Date"> </textarea> 
+    </div>
+    <div>
+        <label for="priority">Priority</label>
+        <select name="priority" [(ngModel)]="priority" id="priority"> 
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+    </div>
     <input type="submit" value="Save Project" class="btn brn-block" />
-</form> -->
+</form>
 
-meow

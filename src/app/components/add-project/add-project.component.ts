@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import { Subscription } from 'rxjs';
 import { Project } from 'src/app/interfaces/project';
 
 @Component({
