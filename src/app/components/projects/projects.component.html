@@ -1,0 +1,5 @@
+<app-add-project (onAddProject) = "addProject($event)"></app-add-project>
+<app-projects-item
+    *ngFor="let project of projects" 
+    [project]='project' 
+></app-projects-item>
