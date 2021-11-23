@@ -12,6 +12,7 @@ import { ProjectsItemComponent } from './components/projects-item/projects-item.
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { ProjectPageComponent } from './components/project-page/project-page.component';
 import { AddTodoItemComponent } from './components/add-todo-item/add-todo-item.component';
+import { TodoItemsItemComponent } from './components/todo-items-item/todo-items-item.component';
 
 const appRoutes: Routes = [
   {path: '', component: ProjectsComponent},
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     ProjectsItemComponent,
     AddProjectComponent,
     ProjectPageComponent,
-    AddTodoItemComponent
+    AddTodoItemComponent,
+    TodoItemsItemComponent
   ],
   imports: [
     BrowserModule,

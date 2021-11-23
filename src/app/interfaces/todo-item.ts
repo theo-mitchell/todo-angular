@@ -4,4 +4,5 @@ export interface TodoItem {
     dueDate: string
     priority?: 'High'|'Medium'|'Low'
     id?: number;
+    projectId: number;
 }

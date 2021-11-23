@@ -1,5 +1,8 @@
-<!-- (onAddProject)="addProject($event)" -->
 <app-add-todo-item 
-    
+    (onAddTodoItem)="addTodoItem($event)"
+    [projectId]='projectId' 
 ></app-add-todo-item>
-<div>{{ project?.name }}</div>
+<div>Project: {{ project?.name }}</div>
+<app-todo-items-item
+    [projectId]='projectId'
+></app-todo-items-item>
